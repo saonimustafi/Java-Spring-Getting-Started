@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- XML uses custom tags. So, for tags, you need to have a definition -->
+
+<!-- At first after running App.java, it will come over here -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+       
+    <!-- We can use both annotation based and XML based configuration at the same time. It's called mixed configuration -->
+       
+	<!-- XML based configuration (bean definitions) -->       
+	<!-- <bean id="vehicle" class="com.aveek.fun.Car"></bean> -->
+	<!-- <bean id="vehicle" class="com.aveek.fun.Bike"></bean> -->
+	
+	<!-- Annotation-based configuration -->	
+	<!-- Letting spring framework know that we are using annotation based configuration instead of bean definitions -->
+	<context:component-scan base-package="com.aveek.fun"></context:component-scan> 
+	
+		
+	<!-- 
+	<bean id="tyre" class="com.aveek.fun.Tyre">
+		Once we use constructor, we cannot use property
+		<property name="brand" value="MRF"></property>	
+	
+		<constructor-arg value="MRF"></constructor-arg>
+	</bean> 
+	-->
+	
+</beans>
